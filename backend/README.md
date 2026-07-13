@@ -2,7 +2,7 @@
 
 ## File structure
 
-```
+```sh
 .
 ├── backend
 │   ├── __init__.py        # "backend" package
@@ -33,16 +33,18 @@
 
 ## How to generate .env file from .env.example file
 
-1. Create a file called `.env` that has the same environment variables from the `.env.example` file. In Linux/Unix, you can use the following command:
+1. Create a file called `.env` that has the same environment variables from the `.env.example` file.
+   In Linux/Unix, you can use the following command:
 
-   ```
-   $ cp ./.env.example ./.env
-   ```
+```sh
+cp ./.env.example ./.env
+```
 
 2. For the `SECRET_KEY` variable, generate it in Linux/Unix using the following command:
 
-   ```
-   openssl rand -hex 32
-   ```
+```sh
+openssl rand -hex 32
+```
 
-   - **Note**: Make sure the `SECRET_KEY` variable is the same as the `NEXTAUTH_SECRET` variable in the `.env` file at `../frontend`.
+- **Note**: Make sure the `SECRET_KEY` variable is the same as the `NEXTAUTH_SECRET` variable in the
+  `.env` file at `../frontend`.

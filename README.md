@@ -15,7 +15,9 @@ A web-based shell command line interface for tracking workout sessions. Check ou
 
 ### Motivation
 
-As a gym-goer and programmer, I wanted to create a workout entry logger specifically for myself and fellow programmers. In order to access this logger at the gym, I decided to make this CLI web-based, usable on desktops and mobile devices.
+As a gym-goer and programmer, I wanted to create a workout entry logger specifically for myself and
+fellow programmers. In order to access this logger at the gym, I decided to make this CLI web-based,
+usable on desktops and mobile devices.
 
 ### In progress
 
@@ -43,40 +45,54 @@ As a gym-goer and programmer, I wanted to create a workout entry logger specific
 
 1. Start the containers:
 
-   ```
-   docker-compose --profile dev up --build
-   ```
+```sh
+docker compose --profile dev up --build
+```
 
 2. Access the applications locally:
-   - Frontend: [http://localhost:3000](http://localhost:3000)
-   - Backend: [http://localhost:8000/docs](http://localhost:8000/docs)
+
+- Frontend: [http://localhost:3000](http://localhost:3000)
+- Backend: [http://localhost:8000/docs](http://localhost:8000/docs)
+
 3. Testing the application:
-   1. Add/modify tests at `./backend/tests/` or `./frontend/tests/`
-   2. Get the docker container ID of the running backend or frontend container:
-      ```
-      docker ps
-      ```
-   3. Enter in the running backend or frontend container id:
-      ```
-      docker exec -it <be_or_fe_container_id> /bin/bash
-      ```
-   4. Run the unit tests within the bash shell:
-      - Backend:
-        ```
-        pytest ./tests/
-        ```
-      - Frontend:
-        ```
-        npm test
-        ```
+
+- Add/modify tests at `./backend/tests/` or `./frontend/tests/`
+- Get the docker container ID of the running backend or frontend container:
+
+```sh
+docker ps
+```
+
+- Enter in the running backend or frontend container id:
+
+```sh
+docker exec -it <be_or_fe_container_id> /bin/bash
+```
+
+- Run the unit tests within the bash shell:
+
+Backend:
+
+```sh
+pytest ./tests/
+```
+
+Frontend:
+
+```sh
+npm test
+```
+
 4. Stop the containers when finished:
-   ```
-   docker-compose --profile dev down
-   ```
+
+```sh
+docker-compose --profile dev down
+```
 
 ## `fit` CLI
 
-`fit`, inspired by `git` version control, helps keep track of your workout/exercise entries in a command line interface. In other words, it is the _git_ for _workouts_, hence the name.
+`fit`, inspired by `git` version control, helps keep track of your workout/exercise entries in a
+command line interface. In other words, it is the _git_ for _workouts_, hence the name.
 
 ### Command Reference
 
